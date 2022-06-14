@@ -39,7 +39,7 @@
 
 --------
 
-## Installation
+## Getting Started
 
 ```
 make setup_project
@@ -52,7 +52,17 @@ Alternatively you can follow these steps:
 conda env create -f environment.yml
 ```
 
-2. 2) make src/ available as a package so that you can include it
+2.  make src/ available as a package so that you can include it in your notebooks
 ```
 pip install -e .
+```
+
+3. make sure you have a git repository initialised
+```
+git init
+```
+
+4. install the pre-commit hooks
+```
+pre-commit install
 ```
