@@ -20,10 +20,16 @@ clean:
 lint:
 	black .
 
-## Set up conda environment and make source code available as a package
-create_environment:
-	mamba env create -f environment.yml
+## Set up the project:
+## 1) create conda environment
+## 2) make src/ available as a package
+## 3) init git
+## 4) setup git hooks
+setup_project:
+	conda env create -f environment.yml
+	conda activate {{ cookiecutter.repo_name }}
 	pip install -e .
+	git init
 	pre-commit install
 
 #################################################################################

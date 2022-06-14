@@ -32,7 +32,7 @@
     ├── environment.yml   <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `conda env export --from-history -f environment.yml`
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
+    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported in notebooks f.e;
     ├── src                <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
 
@@ -41,15 +41,18 @@
 
 ## Installation
 
-Install the conda environment. Since installing the environment trough Conda seems to be very slow these days, you can use 
-[Mamba](https://github.com/mamba-org/mamba) to install the environment.
 ```
-mamba env create -f environment.yml
+make setup_project
 ```
 
-Install the util scripts if you want to run the notebooks by executing the following command in the root directory:
+Alternatively you can follow these steps:
+
+1. Install the conda environment.
+```
+conda env create -f environment.yml
+```
+
+2. 2) make src/ available as a package so that you can include it
 ```
 pip install -e .
 ```
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
