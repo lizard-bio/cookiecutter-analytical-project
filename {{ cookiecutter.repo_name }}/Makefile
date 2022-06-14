@@ -24,6 +24,7 @@ lint:
 create_environment:
 	mamba env create -f environment.yml
 	pip install -e .
+	pre-commit install
 
 #################################################################################
 # PROJECT RULES                                                                 #
