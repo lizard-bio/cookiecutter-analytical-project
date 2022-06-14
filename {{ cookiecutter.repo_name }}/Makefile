@@ -18,7 +18,7 @@ clean:
 
 ## Lint using black
 lint:
-	black src
+	black .
 
 ## Set up conda environment and make source code available as a package
 create_environment:
