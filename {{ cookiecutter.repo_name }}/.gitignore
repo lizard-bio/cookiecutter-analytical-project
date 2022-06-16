@@ -47,15 +47,6 @@ coverage.xml
 *.mo
 *.pot
 
-# DotEnv configuration
-.env
-
-# Pycharm
-.idea
-
-# VS Code
-.vscode/
-
 # Spyder
 .spyproject/
 
@@ -117,7 +108,7 @@ po/*~
 rsconnect/
 
 ##############################################################################
-# R
+# Other
 ##############################################################################
 
 # exclude data from source control by default
@@ -125,3 +116,12 @@ rsconnect/
 
 # Mac OS-specific storage files
 .DS_Store
+
+# DotEnv configuration
+.env
+
+# Pycharm
+.idea
+
+# VS Code
+.vscode/

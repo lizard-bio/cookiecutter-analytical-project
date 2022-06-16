@@ -7,3 +7,15 @@ docs/site/
 .cache/*
 tests/__pycache__/*
 *.pytest_cache/
+
+# Mac OS-specific storage files
+.DS_Store
+
+# DotEnv configuration
+.env
+
+# Pycharm
+.idea
+
+# VS Code
+.vscode/
