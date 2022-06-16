@@ -6,7 +6,7 @@ _(inspired by https://drivendata.github.io/cookiecutter-data-science/)_
 
 ## :muscle: Features
 - Scaffolding an analytical project with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and [Cruft](https://cruft.github.io/cruft/)
-- Code linting /formatting with [pre-commit](https://pre-commit.com/)
+- Code linting / formatting with [pre-commit](https://pre-commit.com/)
 - Environment management through Conda's [environment.yml](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) file
 
 ## :sparkles: Using the template
