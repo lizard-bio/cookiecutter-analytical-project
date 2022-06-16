@@ -10,7 +10,6 @@ args = {
     "lizard_code": "Liz.0.0",
     "project_name": "DrivenData",
     "author_name": "Jeff Bezos",
-    "open_source_license": "BSD-3-Clause",
     "python_interpreter": "python",
 }
 
