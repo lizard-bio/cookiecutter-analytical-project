@@ -13,21 +13,19 @@ _(inspired by https://drivendata.github.io/cookiecutter-data-science/)_
 
 1. Install [Cruft](https://cruft.github.io/cruft/) in your environment.
 This can be installed with [Conda](https://github.com/conda/conda-docs/blob/master/docs/source/miniconda.rst)/[Mamba](https://github.com/mamba-org/mamba) or pip depending on how you manage your Python packages:
-
-``` bash
-$ conda config --add channels conda-forge
-$ conda install cruft
-```
-or
-
-``` bash
-$ pip install cruft
-```
+    ``` bash
+    $ conda config --add channels conda-forge
+    $ conda install cruft
+    ```
+    or
+    ``` bash
+    $ pip install cruft
+    ```
 
 2. Create a new project by running:
-``` bash
-$ cruft create -f https://github.com/lizard-bio/cookiecutter-analytical-project
-```
+    ``` bash
+    $ cruft create -f https://github.com/lizard-bio/cookiecutter-analytical-project
+    ```
 
 3. Dive into the README.md of your new project for the next steps!
 
