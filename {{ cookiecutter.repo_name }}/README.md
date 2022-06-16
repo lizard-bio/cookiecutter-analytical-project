@@ -8,8 +8,7 @@
 ## :open_file_folder: Project Organization
 ------------
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make create_environment` or `make clean`
+    ├── Makefile           <- Makefile with commands like or `make clean` or `make lint`
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
     │   ├── external       <- Data from third party sources.
@@ -41,18 +40,15 @@
 
 ## :hammer_and_pick: Getting Started
 
-```
-make setup_project
-```
+Follow these steps:
 
-Alternatively you can follow these steps:
-
-1. Install the conda environment.
+1. Install and activate the conda environment.
 ```
 conda env create -f environment.yml
+conda activate {{ cookiecutter.repo_name }}
 ```
 
-2.  make src/ available as a package so that you can include it in your notebooks
+2.  (optional) make src/ available as a package so that you can include it in your notebooks
 ```
 pip install -e .
 ```
@@ -66,3 +62,5 @@ git init
 ```
 pre-commit install
 ```
+
+5. Start coding!

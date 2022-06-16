@@ -1,4 +1,4 @@
-.PHONY: clean lint create_environment
+.PHONY: clean lint setup_project
 
 #################################################################################
 # GLOBALS                                                                       #
@@ -19,18 +19,6 @@ clean:
 ## Lint using black
 lint:
 	black .
-
-## Set up the project:
-## 1) create conda environment
-## 2) make src/ available as a package
-## 3) init git
-## 4) setup git hooks
-setup_project:
-	conda env create -f environment.yml
-	conda activate {{ cookiecutter.repo_name }}
-	pip install -e .
-	git init
-	pre-commit install
 
 #################################################################################
 # PROJECT RULES                                                                 #
