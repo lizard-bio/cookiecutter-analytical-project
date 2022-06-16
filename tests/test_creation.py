@@ -32,7 +32,7 @@ class TestCookieSetup(object):
         args = ["python", str(setup_), "--author"]
         p = check_output(args).decode("ascii").strip()
         if pytest.param.get("author_name"):
-            assert p == "DrivenData"
+            assert p == "Jeff Bezos"
         else:
             assert p == "Your name (or your organization/company/team)"
 

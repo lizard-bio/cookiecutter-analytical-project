@@ -1,9 +1,11 @@
-{{cookiecutter.project_name}}
+{{cookiecutter.lizard_code}} - {{cookiecutter.project_name}}
 ==============================
 
-{{cookiecutter.description}}
+{{cookiecutter.short_description}}
 
-## Project Organization
+## :notebook: Summary
+
+## :open_file_folder: Project Organization
 ------------
 
     ├── LICENSE
@@ -39,7 +41,7 @@
 
 --------
 
-## Getting Started
+## :hammer_and_pick: Getting Started
 
 ```
 make setup_project
