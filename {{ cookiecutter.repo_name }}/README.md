@@ -43,24 +43,24 @@
 Follow these steps:
 
 1. Install and activate the conda environment.
-```
-conda env create -f environment.yml
-conda activate {{ cookiecutter.repo_name }}
-```
+    ```
+    conda env create -f environment.yml
+    conda activate {{ cookiecutter.repo_name }}
+    ```
 
 2.  (optional) make src/ available as a package so that you can include it in your notebooks
-```
-pip install -e .
-```
+    ```
+    pip install -e .
+    ```
 
 3. make sure you have a git repository initialised
-```
-git init
-```
+    ```
+    git init
+    ```
 
 4. install the pre-commit hooks
-```
-pre-commit install
-```
+    ```
+    pre-commit install
+    ```
 
 5. Start coding!
