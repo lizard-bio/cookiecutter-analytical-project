@@ -4,66 +4,34 @@ _A logical, reasonably standardized, but flexible project structure for doing an
 
 _(inspired by https://drivendata.github.io/cookiecutter-data-science/)_
 
-### Requirements to use the cookiecutter template:
+## :muscle: Features
+- Scaffolding an analytical project with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and [Cruft](https://cruft.github.io/cruft/)
+- Code linting /formatting with [pre-commit](https://pre-commit.com/)
+- Environment management through Conda's [environment.yml](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) file
+- Quick setup through [make](https://www.gnu.org/software/make/manual/make.html)
 
- - Python 2.7 or 3.5+
- - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0: This can be installed with pip by or conda depending on how you manage your Python packages:
+## :sparkles: Using the template
 
-``` bash
-$ pip install cookiecutter
-```
-
-or
+1. Install [Cruft](https://cruft.github.io/cruft/) in your environment.
+This can be installed with [Conda](https://github.com/conda/conda-docs/blob/master/docs/source/miniconda.rst)/[Mamba](https://github.com/mamba-org/mamba) or pip depending on how you manage your Python packages:
 
 ``` bash
 $ conda config --add channels conda-forge
-$ conda install cookiecutter
+$ conda install cruft
+```
+or
+
+``` bash
+$ pip install cruft
 ```
 
-
-### To start a new project, run:
-
-    cookiecutter https://github.com/lizard-bio/cookiecutter-analytical-project
-
-
-### The resulting directory structure
-
-The directory structure of your new project looks like this:
-
-```
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make create_environment` or `make clean`
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    │
-    ├── notebooks          <- Notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │   └── python
-    │   └── R
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── environment.yml   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         generated with `conda env export --from-history -f environment.yml`
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
+2. Create a new project by running:
+``` bash
+$ cruft create -f https://github.com/lizard-bio/cookiecutter-analytical-project
 ```
 
-### Installing development requirements
+3. Dive into the README.md of your new project for the next steps!
 
-    pip install -r requirements.txt
+## :raised_hands: Contributing
 
-### Running the tests
-
-    pytest tests
+This template is opinionated, but not afraid to be wrong. Best practices change, tools evolve, and lessons are learned. The goal of this project is to make it easier to start, structure, and share an analysis. Pull requests and filing issues is encouraged!
