@@ -53,14 +53,9 @@ Follow these steps:
     pip install -e .
     ```
 
-3. make sure you have a git repository initialised
-    ```
-    git init
-    ```
-
-4. install the pre-commit hooks
+3. install the pre-commit hooks
     ```
     pre-commit install
     ```
 
-5. Start coding!
+4. Start coding!
