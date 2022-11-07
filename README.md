@@ -41,4 +41,4 @@ This can be installed with [Conda](https://github.com/conda/conda-docs/blob/mast
 
 ## :raised_hands: Contributing
 
-This template is opinionated, but not afraid to be wrong. Best practices change, tools evolve, and lessons are learned. The goal of this project is to make it easier to start, structure, and share an analysis. Pull requests and filing issues is encouraged!
+This template is opinionated, but not afraid to be wrong. Best practices change, tools evolve, and lessons are learned. The goal of this project is to make it easier to start, structure, and share an analysis. Starting a discussion, filing an issue or even a pull request is encouraged!
