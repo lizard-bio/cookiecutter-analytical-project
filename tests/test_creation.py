@@ -22,7 +22,7 @@ class TestCookieSetup(object):
     def test_project_name(self):
         project = self.path
         if pytest.param.get("project_name"):
-            name = system_check("DrivenData")
+            name = system_check("Google")
             assert project.name == name
         else:
             assert project.name == "project_name"
@@ -42,7 +42,7 @@ class TestCookieSetup(object):
         assert no_curlies(readme_path)
         if pytest.param.get("project_name"):
             with open(readme_path) as fin:
-                assert "DrivenData" == next(fin).strip()
+                assert "Liz.0.0 - Google" == next(fin).strip()
 
     def test_setup(self):
         setup_ = self.path / "setup.py"
@@ -54,6 +54,15 @@ class TestCookieSetup(object):
         reqs_path = self.path / "environment.yml"
         assert reqs_path.exists()
         assert no_curlies(reqs_path)
+
+    def test_r_install(self):
+        """check if R is in the environment.yml file if "install_R" == "yes" """
+        reqs_path = self.path / "environment.yml"
+        install_r = True if pytest.param.get("install_R") == "yes" else False
+        # read in file and check if
+        with open(reqs_path, "r") as file:
+            data = file.read().replace("\n", "")
+        assert ("r-essentials" in data) == install_r
 
     def test_makefile(self):
         makefile_path = self.path / "Makefile"
@@ -67,7 +76,6 @@ class TestCookieSetup(object):
             "data/interim",
             "data/processed",
             "data/raw",
-            "docs",
             "notebooks",
             "notebooks/python",
             "notebooks/R",

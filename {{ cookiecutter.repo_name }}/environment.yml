@@ -8,3 +8,8 @@ dependencies:
   - black
   - python-dotenv>=0.5.1
   - pre_commit
+
+  {% if cookiecutter.install_R == "yes" %}
+  - r
+  - r-essentials
+  {% endif %}

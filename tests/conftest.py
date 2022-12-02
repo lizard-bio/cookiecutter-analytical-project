@@ -8,9 +8,9 @@ CCDS_ROOT = Path(__file__).parents[1].resolve()
 
 args = {
     "lizard_code": "Liz.0.0",
-    "project_name": "DrivenData",
+    "project_name": "Google",
     "author_name": "Jeff Bezos",
-    "python_interpreter": "python",
+    "install_R": "yes",
 }
 
 
