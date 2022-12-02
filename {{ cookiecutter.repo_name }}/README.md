@@ -48,7 +48,7 @@ Follow these steps:
     conda activate {{ cookiecutter.repo_name }}
     ```
 
-2.  (optional) make src/ available as a package so that you can include it in your notebooks
+2.  (optional) make src/ available as a Python package so that you can include it in your notebooks
     ```
     pip install -e .
     ```
