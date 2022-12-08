@@ -1,4 +1,8 @@
-{{cookiecutter.lizard_code}} - {{cookiecutter.project_name}}
+{%- if cookiecutter.lizard_code -%}
+    {{cookiecutter.lizard_code}} - {{cookiecutter.project_name}}
+{% else %}
+    {{cookiecutter.project_name}}
+{% endif -%}
 ==============================
 
 {{cookiecutter.short_description}}
