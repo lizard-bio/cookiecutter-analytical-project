@@ -10,7 +10,7 @@ args = {
     "lizard_code": "Liz.0.0",
     "project_name": "Google",
     "author_name": "Jeff Bezos",
-    "install_R": "yes",
+    "use_R": "yes",
 }
 
 

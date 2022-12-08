@@ -2,7 +2,7 @@
     {{cookiecutter.lizard_code}} - {{cookiecutter.project_name}}
 {% else %}
     {{cookiecutter.project_name}}
-{% endif -%}
+{%- endif -%}
 ==============================
 
 {{cookiecutter.short_description}}

@@ -56,13 +56,13 @@ class TestCookieSetup(object):
         assert no_curlies(reqs_path)
 
     def test_r_install(self):
-        """check if R is in the environment.yml file if "install_R" == "yes" """
+        """check if R is in the environment.yml file if "use_R" == "yes" """
         reqs_path = self.path / "environment.yml"
-        install_r = True if pytest.param.get("install_R") == "yes" else False
+        use_R = True if pytest.param.get("use_R") == "yes" else False
         # read in file and check if
         with open(reqs_path, "r") as file:
             data = file.read().replace("\n", "")
-        assert ("r-essentials" in data) == install_r
+        assert ("r-essentials" in data) == use_R
 
     def test_makefile(self):
         makefile_path = self.path / "Makefile"
