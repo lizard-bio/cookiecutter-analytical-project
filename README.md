@@ -1,6 +1,6 @@
 # Cookiecutter Analytical Project
 
-_A logical, reasonably standardized, but flexible project structure for doing and sharing an analytical project._
+_A logical, reasonably standardized, but flexible project structure for working on and sharing an analytical project._
 
 _(inspired by https://drivendata.github.io/cookiecutter-data-science/)_
 
