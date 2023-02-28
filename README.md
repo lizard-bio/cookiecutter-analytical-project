@@ -32,6 +32,7 @@ This can be installed with [Conda](https://github.com/conda/conda-docs/blob/mast
     cd <your-project-name>
     git init
     git remote add github git@github.com:lizard-bio/<your-project-name>.git
+    git branch -m main
     git add --all
     git commit -m "first commit"
     git push -f github main
