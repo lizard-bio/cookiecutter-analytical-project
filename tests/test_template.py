@@ -128,3 +128,16 @@ def test_bake_python_and_R_project(cookies):
     check_makefile(path_)
     assert check_author(path_, args["author_name"])
     check_folders(path_, args["use_R"])
+
+
+def test_bake_long_project_code(cookies):
+    args = {
+        "lizard_code": "Liz.10.0.5.5",
+        "project_name": "Microsoft ChatGPT implementation",
+        "author_name": "Ronald Ronalds",
+        "use_R": "yes",
+    }
+
+    result = cookies.bake(template=str(CC_TEMPLATE_ROOT), extra_context=args)
+
+    assert result.exit_code == 0
