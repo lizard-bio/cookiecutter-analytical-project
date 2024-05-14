@@ -4,7 +4,7 @@ import sys
 
 def validate_lizard_code():
     """if there is a lizard code given, make sure it is in the right format (Liz.X.X)"""
-    MODULE_REGEX = r"^Liz(\.[0-9]+)+$"
+    MODULE_REGEX = r"^Liz(\.[a-zA-Z0-9]+)+$"
 
     lizard_code = "{{ cookiecutter.lizard_code }}"
     if lizard_code:
