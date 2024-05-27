@@ -1,6 +1,7 @@
 {
     "lizard_code": "Liz.0.0",
-    "project_name": "<company>-<descriptive-project-name>",
+    "client_name": "<client>",
+    "project_name": "<client>-<descriptive-project-name>",
     "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "author_name": "contact@lizard.bio",
     "short_description": "",
