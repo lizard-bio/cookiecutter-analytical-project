@@ -1,0 +1,14 @@
+BioLizard Proprietary License
+
+Copyright (c) {% now 'utc', '%Y' %} BioLizard. All rights reserved.
+
+Permission is hereby granted to {{ cookiecutter.client_name }} ("the Client") to use, modify, and distribute this software and its documentation for internal use only, subject to the following conditions:
+
+1. Redistribution and use in source and binary forms, with or without modification, are not permitted without prior written consent from BioLizard.
+2. The software and its documentation may not be used for commercial purposes beyond the scope of the agreed contract between BioLizard and the Client without explicit written permission from BioLizard.
+3. The Client may not sublicense, sell, lease, or otherwise make available the software to any third party without prior written consent from BioLizard.
+4. The Client acknowledges that the software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall BioLizard be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
+5. The Client agrees to indemnify and hold harmless BioLizard from any claims, damages, or losses arising out of the Client's use of the software.
+
+For further details or inquiries, please contact:
+contact@lizard.bio

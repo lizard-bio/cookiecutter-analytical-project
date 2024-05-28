@@ -56,6 +56,16 @@ def check_readme(path: Path, liz_code: str, project_name: str) -> bool:
         return liz_code + " - " + project_name == next(fin).strip()
 
 
+def check_license(path: Path) -> bool:
+    """Generate a LICENSE file"""
+    license_path = path / "LICENSE"
+    assert license_path.exists()
+    assert no_curlies(license_path)
+    # check if file starts with "BioLizard Proprietary License"
+    with open(license_path) as fin:
+        return "BioLizard Proprietary License" == next(fin).strip()
+
+
 def check_folders(path: Path, use_R: str) -> None:
     expected_dirs = [
         "data",
@@ -84,7 +94,8 @@ def check_folders(path: Path, use_R: str) -> None:
 def test_bake_python_project(cookies):
     args = {
         "lizard_code": "Liz.0.0",
-        "project_name": "Google",
+        "client_name": "Microsoft",
+        "project_name": "Microsoft",
         "author_name": "Jeff Bezos",
         "use_R": "no",
     }
@@ -104,6 +115,7 @@ def test_bake_python_project(cookies):
     check_makefile(path_)
     assert check_author(path_, args["author_name"])
     check_folders(path_, args["use_R"])
+    assert check_license(path_)
 
 
 def test_bake_python_and_R_project(cookies):
