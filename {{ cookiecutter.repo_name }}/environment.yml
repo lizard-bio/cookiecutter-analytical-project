@@ -8,9 +8,12 @@ dependencies:
   - black
   - python-dotenv>=0.5.1
   - pre_commit
+  - pip:
+    - BioLizardStylePython
   {% if cookiecutter.use_R == "yes" %}
   - r
   - r-essentials
   - rstudio
   - r-tidyverse
+  - r-devtools  # Add devtools for installing from GitHub (via post_gen_project.py hook)
   {%- endif -%}
