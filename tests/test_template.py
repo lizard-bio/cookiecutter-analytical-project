@@ -79,6 +79,8 @@ def check_folders(path: Path, use_R: str) -> None:
         "reports",
         "reports/figures",
         "src",
+        ".github",
+        ".github/workflows",
     ]
     expected_dirs += ["notebooks/R"] if use_R == "yes" else []
 
