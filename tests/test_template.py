@@ -83,7 +83,7 @@ def check_folders(path: Path, use_R: str) -> None:
     expected_dirs += ["notebooks/R"] if use_R == "yes" else []
 
     abs_expected_dirs = [path / d for d in expected_dirs]
-    abs_dirs = list(path.glob("**"))
+    abs_dirs = list([d for d in path.glob("**") if d.is_dir()])
     abs_dirs.remove(path)  # remove root dir
     if path / "src/__pycache__" in abs_dirs:
         abs_dirs.remove(path / "src/__pycache__")
