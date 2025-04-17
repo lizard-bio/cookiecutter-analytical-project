@@ -52,14 +52,36 @@ Follow these steps:
     conda activate {{ cookiecutter.repo_name }}
     ```
 
-2.  (optional) make src/ available as a Python package so that you can include it in your notebooks
+2. Create or link up with a git repository
+
+    Make the remote (on github repo).
+    Remember the standardised naming of the code repo's!
+    `<company>-<descriptive-project-name>`
+
     ```
-    pip install -e .
+    cd {{ cookiecutter.repo_name }}
+    git init
+    git remote add github git@github.com:lizard-bio/<your-project-name>.git
     ```
 
 3. install the pre-commit hooks
     ```
     pre-commit install
     ```
+    before doing our first commit.
 
-4. Start coding!
+4. first commit and push
+    ```
+    git add --all
+    git commit -m "first commit"
+    git push -f github main
+    ```
+
+    The first time this precommit is setting up the correct envs. This will speed up for the following commits.
+
+5.  (optional) make src/ available as a Python package so that you can include it in your notebooks
+    ```
+    pip install -e .
+    ```
+
+6. Start coding!
