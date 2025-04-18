@@ -55,7 +55,7 @@ Follow these steps:
 2. Create or link up with a git repository
 
     Make the remote (on github repo).
-    Remember the standardised naming of the code repo's!
+    Remember the standardised naming of the code repositories!
     `<company>-<descriptive-project-name>`
 
     ```
