@@ -7,6 +7,13 @@ repos:
     -   id: trailing-whitespace
     -   id: check-yaml
     -   id: check-added-large-files
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.11.5
+    hooks:
+    -   id: ruff
+        args: [--fix]
+    -   id: ruff-format
+{% if cookiecutter.use_R == "yes" %}
 -   repo: https://github.com/lorenzwalthert/precommit
     rev: v0.3.0
     hooks:
@@ -14,10 +21,4 @@ repos:
     -   id: lintr
         args: [--warn_only]
         verbose: true
--   repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.11.5
-    hooks:
-    -   id: ruff
-        args: [--fix]
-    -   id: ruff-format
-
+{%- endif -%}
