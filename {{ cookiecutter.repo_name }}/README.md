@@ -77,7 +77,7 @@ Follow these steps:
     git push -f github main
     ```
 
-    The first time this precommit is setting up the correct envs. This will speed up for the following commits.
+    The first time this pre-commit is setting up the correct envs. This will speed up for the following commits.
 
 5.  (optional) make src/ available as a Python package so that you can include it in your notebooks
     ```
