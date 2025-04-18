@@ -46,22 +46,24 @@
 
 Follow these steps:
 
-1. Install and activate the conda environment.
-    ```
-    conda env create -f environment.yml
-    conda activate {{ cookiecutter.repo_name }}
-    ```
+1. Create or link up with a git repository
 
-2. Create or link up with a git repository
-
-    Make the remote (on github repo).
-    Remember the standardised naming of the code repositories!
+    Make a remote git repository.
+    If we are hosting the code: [https://github.com/lizard-bio/](https://github.com/lizard-bio/)
+    Remember the standardised naming of the code repo's!
     `<company>-<descriptive-project-name>`
+    This is the same name as you have already submitted during initialisation proces.
 
     ```
     cd {{ cookiecutter.repo_name }}
     git init
     git remote add github git@github.com:lizard-bio/<your-project-name>.git
+    ```
+
+2. Install and activate the conda environment.
+    ```
+    conda env create -f environment.yml
+    conda activate {{ cookiecutter.repo_name }}
     ```
 
 3. install the pre-commit hooks
