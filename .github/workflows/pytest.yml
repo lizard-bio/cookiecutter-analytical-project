@@ -13,8 +13,10 @@ jobs:
           activate-environment: cookiecutter-analytical-project
           auto-activate-base: false
       - name: Test with pytest
+        shell: bash -l {0}
         run: pytest
       - name: run pre-commit
+        shell: bash -l {0}
         run: |
           pre-commit install
           pre-commit run --all-files
