@@ -1,7 +1,6 @@
-name: {{ cookiecutter.repo_name }}
+name: {{ cookiecutter.name }}
 channels:
   - conda-forge
   - defaults
 dependencies:
   - python=3.11
-

@@ -8,3 +8,4 @@ dependencies:
   - ruff
   - python-dotenv>=0.5.1
   - pre_commit
+  - cruft
