@@ -1,17 +1,20 @@
 name: Pytest
 on: [push]
 
-steps:
-  - uses: actions/checkout@v3
-  - name: Set up Miniconda
-    uses: conda-incubator/setup-miniconda@v2
-    with:
-      environment-file: environment.yml
-      activate-environment: myenv
-      auto-activate-base: false
-  - name: Test with pytest
-    run: pytest
-  - name: run pre-commit
-    run: |
-      pre-commit install
-      pre-commit run --all-files
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          environment-file: environment.yml
+          activate-environment: myenv
+          auto-activate-base: false
+      - name: Test with pytest
+        run: pytest
+      - name: run pre-commit
+        run: |
+          pre-commit install
+          pre-commit run --all-files
