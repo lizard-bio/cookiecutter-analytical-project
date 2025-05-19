@@ -2,7 +2,7 @@
 
 ## R env
 
-For the R environment, we use the `renv` package to manage dependencies. 
+For the R environment, we use the `renv` package to manage dependencies.
 This is a short how-to.
 Renv install the necessary packages in a local library, so you do not need to install them globally.
 Renv stores version of the pacakges in the a renv.lock file. This ensures easy reproducibility of the environment.
