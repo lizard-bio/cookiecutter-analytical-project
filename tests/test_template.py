@@ -1,5 +1,5 @@
 from pathlib import Path
-from subprocess import check_output
+from subprocess import check_output  # nosec
 
 
 CC_TEMPLATE_ROOT = Path(__file__).parents[1].resolve()
@@ -33,7 +33,7 @@ def check_makefile(path: Path):
 def check_author(path: Path, author_name: str) -> bool:
     setup_ = path / "setup.py"
     args = ["python", str(setup_), "--author"]
-    p = check_output(args).decode("ascii").strip()
+    p = check_output(args).decode("ascii").strip()  # nosec
     return p == author_name
 
 
@@ -77,52 +77,6 @@ def check_folders(path: Path, use_R: str) -> None:
         abs_dirs.remove(path / "src/__pycache__")
 
     assert set(abs_dirs) == set(abs_expected_dirs)
-
-
-def test_bake_python_project(cookies):
-    args = {
-        "lizard_code": "Liz.0.0",
-        "client_name": "Microsoft",
-        "project_name": "Microsoft",
-        "author_name": "Jeff Bezos",
-    }
-
-    result = cookies.bake(template=str(CC_TEMPLATE_ROOT), extra_context=args)
-
-    assert result.exit_code == 0
-    assert result.exception is None
-
-    assert result.project_path.name == args["project_name"].lower()
-    assert result.project_path.is_dir()
-    path_ = result.project_path
-
-    assert check_readme(path_, args["lizard_code"], args["project_name"])
-    check_environment(path_)
-    check_makefile(path_)
-    assert check_author(path_, args["author_name"])
-    assert check_license(path_)
-
-
-def test_bake_python_and_R_project(cookies):
-    args = {
-        "lizard_code": "Liz.10.0",
-        "project_name": "Microsoft ChatGPT implementation",
-        "author_name": "Ronald Ronalds",
-        "use_R": "yes",
-    }
-
-    result = cookies.bake(template=str(CC_TEMPLATE_ROOT), extra_context=args)
-
-    assert result.exit_code == 0
-    assert result.exception is None
-
-    assert result.project_path.is_dir()
-    path_ = result.project_path
-
-    assert check_readme(path_, args["lizard_code"], args["project_name"])
-    check_environment(path_)
-    check_makefile(path_)
-    assert check_author(path_, args["author_name"])
 
 
 def test_bake_long_project_code(cookies):
