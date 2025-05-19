@@ -13,12 +13,3 @@ repos:
     -   id: ruff
         args: [--fix]
     -   id: ruff-format
-{% if cookiecutter.use_R == "yes" %}
--   repo: https://github.com/lorenzwalthert/precommit
-    rev: v0.3.0
-    hooks:
-    -   id: style-files
-    -   id: lintr
-        args: [--warn_only]
-        verbose: true
-{%- endif -%}

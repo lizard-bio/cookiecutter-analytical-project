@@ -24,16 +24,6 @@ def check_environment(path) -> None:
     assert no_curlies(reqs_path)
 
 
-def check_r_install(path: Path, use_R: str) -> bool:
-    """check if R is in the environment.yml file if "use_R" == "yes" """
-    reqs_path = path / "environment.yml"
-    use_R_ = True if use_R == "yes" else False
-    # read in file and check if
-    with open(reqs_path, "r") as file:
-        data = file.read().replace("\n", "")
-    return ("r-essentials" in data) == use_R_
-
-
 def check_makefile(path: Path):
     makefile_path = path / "Makefile"
     assert makefile_path.exists()
