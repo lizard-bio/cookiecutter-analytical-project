@@ -5,5 +5,4 @@
     "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "author_name": "contact@lizard.bio",
     "short_description": "",
-    "use_R": ["no", "yes"]
 }

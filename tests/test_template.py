@@ -73,16 +73,12 @@ def check_folders(path: Path, use_R: str) -> None:
         "data/interim",
         "data/processed",
         "data/raw",
-        "notebooks",
-        "notebooks/python",
         "references",
         "reports",
         "reports/figures",
-        "src",
         ".github",
         ".github/workflows",
     ]
-    expected_dirs += ["notebooks/R"] if use_R == "yes" else []
 
     abs_expected_dirs = [path / d for d in expected_dirs]
     abs_dirs = list([d for d in path.glob("**") if d.is_dir()])
@@ -99,7 +95,6 @@ def test_bake_python_project(cookies):
         "client_name": "Microsoft",
         "project_name": "Microsoft",
         "author_name": "Jeff Bezos",
-        "use_R": "no",
     }
 
     result = cookies.bake(template=str(CC_TEMPLATE_ROOT), extra_context=args)
@@ -113,10 +108,8 @@ def test_bake_python_project(cookies):
 
     assert check_readme(path_, args["lizard_code"], args["project_name"])
     check_environment(path_)
-    assert check_r_install(path_, args["use_R"])
     check_makefile(path_)
     assert check_author(path_, args["author_name"])
-    check_folders(path_, args["use_R"])
     assert check_license(path_)
 
 
@@ -138,10 +131,8 @@ def test_bake_python_and_R_project(cookies):
 
     assert check_readme(path_, args["lizard_code"], args["project_name"])
     check_environment(path_)
-    assert check_r_install(path_, args["use_R"])
     check_makefile(path_)
     assert check_author(path_, args["author_name"])
-    check_folders(path_, args["use_R"])
 
 
 def test_bake_long_project_code(cookies):
@@ -149,7 +140,6 @@ def test_bake_long_project_code(cookies):
         "lizard_code": "Liz.10.0.5.5",
         "project_name": "Microsoft ChatGPT implementation",
         "author_name": "Ronald Ronalds",
-        "use_R": "yes",
     }
 
     result = cookies.bake(template=str(CC_TEMPLATE_ROOT), extra_context=args)

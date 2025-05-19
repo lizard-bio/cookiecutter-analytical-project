@@ -12,7 +12,6 @@
 ## :open_file_folder: Project Organization
 ------------
 
-    ├── Makefile           <- Makefile with commands like or `make clean` or `make lint`
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
     │   ├── external       <- Data from third party sources.
@@ -32,13 +31,10 @@
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures to be used in reporting
     │
-    ├── environment.yml   <- The requirements file for reproducing the analysis environment, e.g.
+    ├── environment.yml    <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `conda env export --from-history -f environment.yml`
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported in notebooks f.e;
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-
+    ├── project.sh         <- bash script to install new blocks ( r, python or others.)
 
 --------
 
