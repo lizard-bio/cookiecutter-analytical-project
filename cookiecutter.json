@@ -4,5 +4,5 @@
     "project_name": "<client>-<descriptive-project-name>",
     "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "author_name": "contact@lizard.bio",
-    "short_description": "",
+    "short_description": ""
 }
