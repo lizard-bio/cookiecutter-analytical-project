@@ -1,4 +1,0 @@
-pytest==8.2.1
-pytest-cookies==0.7.0
-setuptools==78.1.0
-pre-commit==4.2.0

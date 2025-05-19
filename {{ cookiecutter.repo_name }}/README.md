@@ -34,7 +34,7 @@
     ├── environment.yml    <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `conda env export --from-history -f environment.yml`
     │
-    ├── project.sh         <- bash script to install new blocks ( r, python or others.)
+    ├── project.py         <- python script to install new blocks ( r, python or others.)
 
 --------
 
@@ -82,4 +82,6 @@ Follow these steps:
     pip install -e .
     ```
 
-6. Start coding!
+6.  run `python.py` to add coding blocks. Rerun as many time as needed.
+
+7. Start coding!
