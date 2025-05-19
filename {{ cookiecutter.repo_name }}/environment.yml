@@ -9,4 +9,4 @@ dependencies:
   - python-dotenv>=0.5.1
   - pre_commit
   - cookiecutter
-  - questionnaire
+  - questionary
