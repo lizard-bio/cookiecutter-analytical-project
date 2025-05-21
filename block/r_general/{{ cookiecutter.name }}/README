@@ -28,3 +28,8 @@ To restore a previous enviornment.
 renv::refresh()
 ```
 To update all the packages.
+
+```R
+renv::snapshot()
+```
+to update your lock file
