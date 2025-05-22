@@ -5,7 +5,7 @@ from cookiecutter.main import cookiecutter
 base_choices = [
     questionary.Choice("Add a general python submodule", value=0),
     questionary.Choice("Add a general R submodule", value=1),
-    #    questionary.Choice('Add a spatial submodule', value=2)
+    questionary.Choice("Add VM on GCP to give me some computer", value=2),
 ]
 
 base_selection = questionary.select("What do you want to do?", choices=base_choices).ask()
@@ -22,3 +22,5 @@ elif base_selection == 1:
         checkout="feature/switch_to_functional_setup",
         directory="block/r_general",
     )
+elif base_selection == 2:
+    cookiecutter("git@github.com:lizard-bio/biolizard-cloud-vm-provisioning.git")
