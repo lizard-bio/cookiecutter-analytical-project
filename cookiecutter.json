@@ -5,8 +5,7 @@
     "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "author_name": "contact@lizard.bio",
     "short_description": "",
-    "__prompts__":
-    {
+    "__prompts__": {
         "lizard_code": {
             "type": "string",
             "default": "Liz.0.0",
@@ -30,6 +29,6 @@
         "author_name": {
             "type": "string",
             "default": "Fill in your name as an author of this code package."
-
+        }
     }
 }
