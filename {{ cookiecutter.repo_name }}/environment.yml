@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.11
+  - python=3.13
   - coverage
   - ruff
   - python-dotenv>=0.5.1

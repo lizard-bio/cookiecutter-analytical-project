@@ -4,5 +4,32 @@
     "project_name": "<client>-<descriptive-project-name>",
     "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "author_name": "contact@lizard.bio",
-    "short_description": ""
+    "short_description": "",
+    "__prompts__":
+    {
+        "lizard_code": {
+            "type": "string",
+            "default": "Liz.0.0",
+            "description": "Lizard code version for the project."
+        },
+        "client_name": {
+            "type": "string",
+            "default": "<client>",
+            "description": "Name of the client for whom the project is being developed. Please use 'biolizard' for internal projects."
+        },
+        "project_name": {
+            "type": "string",
+            "default": "<client>-<descriptive-project-name>",
+            "description": "Descriptive name of the project. Use a format like '<client>-<descriptive-project-name>' to ensure clarity and consistency."
+        },
+        "repo_name": {
+            "type": "string",
+            "default": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+            "description": "Repository name derived from the project name."
+        },
+        "author_name": {
+            "type": "string",
+            "default": "Fill in your name as an author of this code package."
+
+    }
 }
