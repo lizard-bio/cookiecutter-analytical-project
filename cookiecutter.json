@@ -5,6 +5,7 @@
     "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
     "author_name": "contact@lizard.bio",
     "short_description": "",
+    "_template_version": "1.0.0",
     "__prompts__": {
         "lizard_code": {
             "type": "string",
