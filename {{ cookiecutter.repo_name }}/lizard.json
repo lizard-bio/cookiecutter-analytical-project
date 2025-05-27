@@ -1,0 +1,8 @@
+{
+    "lizard_code": "{{ cookiecutter.lizard_code }}",
+    "client_name": "{{ cookiecutter.client_name }}",
+    "project_name": "{{ cookiecutter.project_name }}",
+    "author_name": "{{ cookiecutter.author_name }}",
+    "short_description": "{{ cookiecutter.short_description }}",
+    "template_version": "{{ cookiecutter._template_version }}"
+}
