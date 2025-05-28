@@ -9,6 +9,3 @@ dependencies:
   - pre_commit
   - cookiecutter
   - questionary
-  - pip
-  - pip:
-      - vulture==2.14
