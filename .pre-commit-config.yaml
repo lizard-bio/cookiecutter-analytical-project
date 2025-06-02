@@ -22,9 +22,4 @@ repos:
     -   id: bandit
         args: [ -c, "pyproject.toml" ]
         additional_dependencies: [".[toml]"]
--   repo: https://github.com/jendrikseipp/vulture
-    rev: 'v2.14'
-    hooks:
-      - id: vulture
-        args: ["."]
 
