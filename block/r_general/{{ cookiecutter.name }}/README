@@ -1,6 +1,6 @@
 # {{ cookiecutter.name }}
 
-## R env
+## Renv
 
 For the R environment, we use the `renv` package to manage dependencies.
 This is a short how-to.
