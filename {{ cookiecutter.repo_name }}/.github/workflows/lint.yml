@@ -28,4 +28,4 @@ jobs:
       - name: bandit
         run: |
           pip install bandit
-          bandit -r .
+          bandit -r -c pyproject.toml .

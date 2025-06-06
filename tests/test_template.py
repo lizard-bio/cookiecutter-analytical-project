@@ -1,5 +1,5 @@
 from pathlib import Path
-from subprocess import check_output
+from subprocess import check_output  # nosec
 
 
 CC_TEMPLATE_ROOT = Path(__file__).parents[1].resolve()
@@ -24,16 +24,6 @@ def check_environment(path) -> None:
     assert no_curlies(reqs_path)
 
 
-def check_r_install(path: Path, use_R: str) -> bool:
-    """check if R is in the environment.yml file if "use_R" == "yes" """
-    reqs_path = path / "environment.yml"
-    use_R_ = True if use_R == "yes" else False
-    # read in file and check if
-    with open(reqs_path, "r") as file:
-        data = file.read().replace("\n", "")
-    return ("r-essentials" in data) == use_R_
-
-
 def check_makefile(path: Path):
     makefile_path = path / "Makefile"
     assert makefile_path.exists()
@@ -43,7 +33,7 @@ def check_makefile(path: Path):
 def check_author(path: Path, author_name: str) -> bool:
     setup_ = path / "setup.py"
     args = ["python", str(setup_), "--author"]
-    p = check_output(args).decode("ascii").strip()
+    p = check_output(args).decode("ascii").strip()  # nosec
     return p == author_name
 
 
@@ -73,16 +63,12 @@ def check_folders(path: Path, use_R: str) -> None:
         "data/interim",
         "data/processed",
         "data/raw",
-        "notebooks",
-        "notebooks/python",
         "references",
         "reports",
         "reports/figures",
-        "src",
         ".github",
         ".github/workflows",
     ]
-    expected_dirs += ["notebooks/R"] if use_R == "yes" else []
 
     abs_expected_dirs = [path / d for d in expected_dirs]
     abs_dirs = list([d for d in path.glob("**") if d.is_dir()])
@@ -93,63 +79,11 @@ def check_folders(path: Path, use_R: str) -> None:
     assert set(abs_dirs) == set(abs_expected_dirs)
 
 
-def test_bake_python_project(cookies):
-    args = {
-        "lizard_code": "Liz.0.0",
-        "client_name": "Microsoft",
-        "project_name": "Microsoft",
-        "author_name": "Jeff Bezos",
-        "use_R": "no",
-    }
-
-    result = cookies.bake(template=str(CC_TEMPLATE_ROOT), extra_context=args)
-
-    assert result.exit_code == 0
-    assert result.exception is None
-
-    assert result.project_path.name == args["project_name"].lower()
-    assert result.project_path.is_dir()
-    path_ = result.project_path
-
-    assert check_readme(path_, args["lizard_code"], args["project_name"])
-    check_environment(path_)
-    assert check_r_install(path_, args["use_R"])
-    check_makefile(path_)
-    assert check_author(path_, args["author_name"])
-    check_folders(path_, args["use_R"])
-    assert check_license(path_)
-
-
-def test_bake_python_and_R_project(cookies):
-    args = {
-        "lizard_code": "Liz.10.0",
-        "project_name": "Microsoft ChatGPT implementation",
-        "author_name": "Ronald Ronalds",
-        "use_R": "yes",
-    }
-
-    result = cookies.bake(template=str(CC_TEMPLATE_ROOT), extra_context=args)
-
-    assert result.exit_code == 0
-    assert result.exception is None
-
-    assert result.project_path.is_dir()
-    path_ = result.project_path
-
-    assert check_readme(path_, args["lizard_code"], args["project_name"])
-    check_environment(path_)
-    assert check_r_install(path_, args["use_R"])
-    check_makefile(path_)
-    assert check_author(path_, args["author_name"])
-    check_folders(path_, args["use_R"])
-
-
 def test_bake_long_project_code(cookies):
     args = {
         "lizard_code": "Liz.10.0.5.5",
         "project_name": "Microsoft ChatGPT implementation",
         "author_name": "Ronald Ronalds",
-        "use_R": "yes",
     }
 
     result = cookies.bake(template=str(CC_TEMPLATE_ROOT), extra_context=args)

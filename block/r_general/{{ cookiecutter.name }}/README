@@ -1,0 +1,35 @@
+# {{ cookiecutter.name }}
+
+## Renv
+
+For the R environment, we use the `renv` package to manage dependencies.
+This is a short how-to.
+Renv install the necessary packages in a local library, so you do not need to install them globally.
+Renv stores version of the pacakges in the a renv.lock file. This ensures easy reproducibility of the environment.
+
+```R
+renv::init()
+```
+initialisates the necessary files and settings. It will automatically look into your R files to see if there are packages that need to be installed or not
+
+
+```R
+renv::install()
+```
+Is used for installing the packages.
+
+
+```R
+renv::restore()
+```
+To restore a previous enviornment.
+
+```R
+renv::refresh()
+```
+To update all the packages.
+
+```R
+renv::snapshot()
+```
+to update your lock file

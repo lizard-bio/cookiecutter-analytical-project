@@ -12,7 +12,6 @@
 ## :open_file_folder: Project Organization
 ------------
 
-    ├── Makefile           <- Makefile with commands like or `make clean` or `make lint`
     ├── README.md          <- The top-level README for developers using this project.
     ├── data
     │   ├── external       <- Data from third party sources.
@@ -20,25 +19,15 @@
     │   ├── processed      <- The final, canonical data sets for modeling.
     │   └── raw            <- The original, immutable data dump.
     │
-    │
-    ├── notebooks          <- Notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │   └── python
-    │   └── R
-    │
     ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
     │
     ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
     │   └── figures        <- Generated graphics and figures to be used in reporting
     │
-    ├── environment.yml   <- The requirements file for reproducing the analysis environment, e.g.
+    ├── environment.yml    <- The requirements file for reproducing the analysis environment, e.g.
     │                         generated with `conda env export --from-history -f environment.yml`
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported in notebooks f.e;
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-
+    ├── project.py         <- python script to install new blocks ( r, python or others.)
 
 --------
 
@@ -46,7 +35,10 @@
 
 Follow these steps:
 
-1. Create or link up with a git repository
+### 0. First and foremost, make sure you have your ssh key linked to your github account. Once this has been set for your machine you never have to look back.
+    Have a look at our notion page: https://www.notion.so/biolizard/SSH-to-Github-20a7bb9380c080958c30eb5b2552887c
+
+### 1. Create or link up with a git repository
 
     Make a remote git repository.
     If we are hosting the code: [https://github.com/lizard-bio/](https://github.com/lizard-bio/)
@@ -57,33 +49,35 @@ Follow these steps:
     ```
     cd {{ cookiecutter.repo_name }}
     git init
-    git remote add github git@github.com:lizard-bio/<your-project-name>.git
+    git remote add origin git@github.com:lizard-bio/<your-project-name>.git
     ```
 
-2. Install and activate the conda environment.
+### 2. Install and activate the conda environment.
     ```
     conda env create -f environment.yml
     conda activate {{ cookiecutter.repo_name }}
     ```
 
-3. install the pre-commit hooks
+### 3. install the pre-commit hooks
     ```
     pre-commit install
     ```
     before doing our first commit.
 
-4. first commit and push
+### 4. first commit and push
     ```
     git add --all
     git commit -m "first commit"
-    git push -f github main
+    git push -f origin main
     ```
 
     The first time this pre-commit is setting up the correct envs. This will speed up for the following commits.
 
-5.  (optional) make src/ available as a Python package so that you can include it in your notebooks
+### 5.  (optional) make src/ available as a Python package so that you can include it in your notebooks
     ```
     pip install -e .
     ```
 
-6. Start coding!
+### 6.  run `project.py` to add coding blocks. Rerun as many time as needed.
+
+### 7. Start coding!

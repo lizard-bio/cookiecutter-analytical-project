@@ -33,7 +33,6 @@ src = ["."]
 indent-width = 4
 line-length = 100
 
-# Assume Python 3.12
 target-version = "py312"
 
 [tool.ruff.lint]
@@ -47,8 +46,5 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 quote-style = "double"
 indent-style = "space"
 
-[tool.bandit]
-exclude_dirs = ["tests",]
-
-[tool.pytest.ini_options]
-pythonpath = ["."]
+[tool.bandit.assert_used]
+skips = ['*_test.py', '*/test_*.py']
