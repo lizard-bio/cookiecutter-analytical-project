@@ -35,7 +35,10 @@
 
 Follow these steps:
 
-1. Create or link up with a git repository
+### 0. First and foremost, make sure you have your ssh key linked to your github account. Once this has been set for your machine you never have to look back.
+    Have a look at our notion page: https://www.notion.so/biolizard/SSH-to-Github-20a7bb9380c080958c30eb5b2552887c
+
+### 1. Create or link up with a git repository
 
     Make a remote git repository.
     If we are hosting the code: [https://github.com/lizard-bio/](https://github.com/lizard-bio/)
@@ -49,19 +52,19 @@ Follow these steps:
     git remote add origin git@github.com:lizard-bio/<your-project-name>.git
     ```
 
-2. Install and activate the conda environment.
+### 2. Install and activate the conda environment.
     ```
     conda env create -f environment.yml
     conda activate {{ cookiecutter.repo_name }}
     ```
 
-3. install the pre-commit hooks
+### 3. install the pre-commit hooks
     ```
     pre-commit install
     ```
     before doing our first commit.
 
-4. first commit and push
+### 4. first commit and push
     ```
     git add --all
     git commit -m "first commit"
@@ -70,11 +73,11 @@ Follow these steps:
 
     The first time this pre-commit is setting up the correct envs. This will speed up for the following commits.
 
-5.  (optional) make src/ available as a Python package so that you can include it in your notebooks
+### 5.  (optional) make src/ available as a Python package so that you can include it in your notebooks
     ```
     pip install -e .
     ```
 
-6.  run `project.py` to add coding blocks. Rerun as many time as needed.
+### 6.  run `project.py` to add coding blocks. Rerun as many time as needed.
 
-7. Start coding!
+### 7. Start coding!
