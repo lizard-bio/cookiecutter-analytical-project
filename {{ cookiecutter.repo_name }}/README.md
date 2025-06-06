@@ -46,7 +46,7 @@ Follow these steps:
     ```
     cd {{ cookiecutter.repo_name }}
     git init
-    git remote add github git@github.com:lizard-bio/<your-project-name>.git
+    git remote add origin git@github.com:lizard-bio/<your-project-name>.git
     ```
 
 2. Install and activate the conda environment.
@@ -65,7 +65,7 @@ Follow these steps:
     ```
     git add --all
     git commit -m "first commit"
-    git push -f github main
+    git push -f origin main
     ```
 
     The first time this pre-commit is setting up the correct envs. This will speed up for the following commits.
@@ -75,6 +75,6 @@ Follow these steps:
     pip install -e .
     ```
 
-6.  run `python.py` to add coding blocks. Rerun as many time as needed.
+6.  run `project.py` to add coding blocks. Rerun as many time as needed.
 
 7. Start coding!
