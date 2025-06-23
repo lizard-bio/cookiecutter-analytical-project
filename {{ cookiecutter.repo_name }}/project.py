@@ -5,7 +5,7 @@ from cookiecutter.main import cookiecutter
 base_choices = [
     questionary.Choice("Add a general python submodule", value=0),
     questionary.Choice("Add a general R submodule", value=1),
-    questionary.Choice("Add VM on GCP to give me some computer", value=2),
+    questionary.Choice("Add VM on GCP to give me some compute", value=2),
 ]
 
 base_selection = questionary.select("What do you want to do?", choices=base_choices).ask()
