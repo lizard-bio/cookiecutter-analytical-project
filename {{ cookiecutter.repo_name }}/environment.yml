@@ -3,6 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - openssh=10.2p1
   - python=3.12
   - coverage
   - ruff
@@ -10,3 +11,4 @@ dependencies:
   - pre_commit
   - cookiecutter
   - questionary
+  - air==0.9.0

@@ -1,6 +1,22 @@
 # {{ cookiecutter.name }}
 
-## Renv
+You should already be in a git repo. Install the R-specific pre-commit hooks
+
+```
+pre-commit install
+```
+
+before doing your first commit.
+
+## Coding conventions
+
+Follow our [R programming style guide](https://www.notion.so/biolizard/R-programming-style-guide-0c2314a846d44bcf8dcdc4e619c53d80)
+
+- Formatting is managed by [air](https://posit-dev.github.io/air/).
+- [Jarl](https://jarl.etiennebacher.com/) is responsible for linting, please
+  install it for optimal experience.
+
+## Managing analysis environments
 
 For the R environment, we use the `renv` package to manage dependencies.
 This is a short how-to.

@@ -1,0 +1,10 @@
+[lint]
+select = [ "PERF", "COMM", "CORR", "READ", "SUSP", "TESTTHAT" ]
+default-exclude = true
+check-roxygen = true
+
+[lint.assignment]
+operator = "<-"
+
+[lint.quotes]
+quote = "double"
